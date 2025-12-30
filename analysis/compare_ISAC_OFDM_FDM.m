@@ -1,6 +1,12 @@
 clc; clear; close all;
 
 %% =======================
+% Add project folders to MATLAB path  <<<【新增】
+%% =======================
+currentFilePath = fileparts(mfilename('fullpath'));
+addpath(genpath(fullfile(currentFilePath, '..')));
+
+%% =======================
 % Common Parameters
 %% =======================
 SNR_dB = [-10 -5 0 5 10 15 20 25 30];
