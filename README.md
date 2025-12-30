@@ -1,11 +1,11 @@
 # ISAC OFDM / FDM MATLAB Simulation
 
-This repository contains MATLAB simulation codes for an  
-Integrated Sensing and Communication (ISAC) system based on  
-OFDM and FDM waveforms.  
+This repository contains MATLAB simulation codes for an
+Integrated Sensing and Communication (ISAC) system based on
+OFDM and FDM waveforms.
 
-The project focuses on waveform-level BER performance comparison
-between ISAC-OFDM and ISAC-FDM under various SNR conditions.
+The project compares waveform-level BER performance between
+ISAC-OFDM and ISAC-FDM under various SNR conditions.
 
 ---
 
@@ -15,13 +15,13 @@ between ISAC-OFDM and ISAC-FDM under various SNR conditions.
   Standalone waveform-level simulation scripts (OFDM / FDM)
 
 - run/  
-  Core simulation functions (called by analysis scripts)
+  Core simulation functions (called by analysis or demo scripts)
 
 - functions/  
   Signal processing and channel model functions
 
 - analysis/  
-  Result comparison, visualization, and report-level figures
+  Result comparison and visualization scripts
 
 - outputs/  
   Generated simulation figures
@@ -30,8 +30,8 @@ between ISAC-OFDM and ISAC-FDM under various SNR conditions.
 
 ## How to Run (Recommended)
 
-1. Open MATLAB  
-2. Navigate to the `analysis` folder  
+1. Open MATLAB
+2. Navigate to the `analysis` folder
 3. Run:
 
 ```matlab
@@ -45,9 +45,9 @@ This script automatically:
 
 ---
 
-## Run Individual Simulations (Optional)
+## Run Individual Simulations (Function Call)
 
-### ISAC-OFDM only
+### ISAC-OFDM
 ```matlab
 gamma = 0.8;
 SNR_dB = [-10 -5 0 5 10 15 20];
@@ -55,7 +55,7 @@ SNR_dB = [-10 -5 0 5 10 15 20];
 BER_OFDM = run_ISAC_OFDM(gamma, SNR_dB);
 ```
 
-### ISAC-FDM only
+### ISAC-FDM
 ```matlab
 alpha = 0.8;
 SNR_dB = [-10 -5 0 5 10 15 20];
@@ -65,7 +65,8 @@ BER_FDM = run_ISAC_FDM(alpha, SNR_dB);
 
 > Note:  
 > `run_ISAC_OFDM.m` and `run_ISAC_FDM.m` are MATLAB functions and
-> must be called with input arguments.
+> must be called with input arguments. They should not be executed
+> directly using the Run button.
 
 ---
 
